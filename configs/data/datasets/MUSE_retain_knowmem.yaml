@@ -1,0 +1,14 @@
+MUSE_retain_knowmem:
+  handler: QADataset
+  args:
+    hf_args:
+      path: muse-bench/MUSE-${dataset_defaults.muse.data_split}
+      name: "knowmem"
+      split: "retain_qa"
+    few_shot_dataset_hf_args:
+      path: muse-bench/MUSE-${dataset_defaults.muse.data_split}
+      name: "knowmem"
+      split: "retain_qa_icl"
+    question_key: "question"
+    answer_key: "answer"
+    max_length: ${dataset_defaults.muse.qa_max_length}

@@ -1,0 +1,19 @@
+# @package eval.muse.metrics.retain_knowmem_ROUGE
+defaults:
+  - /collator@collators: indexed
+  - ../../data/datasets@datasets: MUSE_retain_knowmem
+  - ../../generation@generation_args: default
+handler: rouge
+rouge_type: rougeL_f1
+batch_size: ${eval.muse.knowmem_batch_size}
+datasets:
+  MUSE_retain_knowmem:
+    args:
+      hf_args:
+        path: muse-bench/MUSE-${eval.muse.data_split}
+      few_shot_dataset_hf_args:
+        path: muse-bench/MUSE-${eval.muse.data_split}
+      predict_with_generate: True
+generation_args:
+  max_new_tokens: 32
+  stopwords: ["\n\n", "\nQuestion", "Question:"]

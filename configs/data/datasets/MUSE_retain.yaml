@@ -1,0 +1,9 @@
+MUSE_retain:
+  handler: PretrainingDataset
+  args:
+    hf_args:
+      path: muse-bench/MUSE-${dataset_defaults.muse.data_split}
+      name: "raw"
+      split: "retain1"
+    text_key: "text"
+    max_length: ${dataset_defaults.muse.max_length}

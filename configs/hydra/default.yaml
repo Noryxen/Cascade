@@ -1,0 +1,11 @@
+defaults:
+  - override hydra_logging: default
+  - override job_logging: default
+
+run:
+  dir: ${paths.output_dir}
+
+job_logging:
+  handlers:
+    file:
+      filename: ${hydra.runtime.output_dir}/${mode}.log

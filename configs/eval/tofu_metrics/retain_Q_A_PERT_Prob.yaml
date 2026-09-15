@@ -1,0 +1,9 @@
+# @package eval.tofu.metrics.retain_Q_A_PERT_Prob
+
+defaults:
+  - /collator@collators: indexed
+  - ../../data/datasets@datasets: TOFU_QA_retain_pert
+  # ^ get default dataset and generation config information
+
+handler: probability
+batch_size: ${eval.tofu.batch_size}

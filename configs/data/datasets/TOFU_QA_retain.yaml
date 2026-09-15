@@ -1,0 +1,10 @@
+TOFU_QA_retain:
+  handler: QADataset
+  args:
+    hf_args:
+      name: ${dataset_defaults.tofu.retain_split}
+      split: "train"
+      path: ${paths.data_dir}/tofu
+    question_key: "question"
+    answer_key: "answer"
+    max_length: ${dataset_defaults.tofu.max_length}

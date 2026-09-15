@@ -1,0 +1,10 @@
+defaults:
+  - common
+  - trainer: finetune
+  - data: finetune
+  - eval: tofu
+  - hydra: default
+  - experiment: null
+  - _self_
+
+mode: train

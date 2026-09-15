@@ -1,0 +1,7 @@
+defaults:
+  - base
+  - _self_
+
+handler: FinetuneTrainer
+args:
+  num_train_epochs: 10

@@ -1,0 +1,65 @@
+defaults:
+  - base
+  - _self_
+
+handler: Cascade
+args:
+  num_train_epochs: 6
+method_args:
+  # Total objective: lambda_forget * L_forget + alpha * L_retain
+  lambda_forget: 2.0
+  alpha: 1.0
+  # Discover top-k causal route modules from activation statistics.
+  topk_modules: 24
+  route_update_interval: 20
+  route_ema_decay: 0.85
+  # CRU-v3 stabilization: warmup forget strength and use priv-safe contrast.
+  lambda_warmup_steps: 40
+  contrastive_forget: true
+  contrastive_margin: 0.0
+  normalize_route_loss: true
+  # Dynamic suppression: max(0, R(x)-tau)^p
+  dynamic_threshold: true
+  threshold_tau: 0.0
+  threshold_power: 2.0
+  # Candidate modules used for route discovery.
+  candidate_patterns: ["self_attn.o_proj", "mlp.down_proj"]
+  # Cascade auxiliary controls.
+  cas_curvature: 1.0
+  cas_hierarchy_margin: 0.1
+  cas_hierarchy_weight: 0.0
+  cas_hierarchy_use_retain: false
+  cas_locality_weight: 0.0
+  cas_locality_tau: 0.0
+  cas_compress_weight: 0.0
+  cas_compress_tau: 0.0
+  cas_eps: 1e-6
+  cas_projection_enable: true
+  cas_projection_hidden_dim: 0
+  cas_projection_out_dim: 0
+  cas_projection_dropout: 0.0
+  cas_gate_enable: true
+  cas_gate_a: 0.0
+  cas_gate_b: 2.0
+  cas_sensitive_top_ratio: 0.5
+  cas_route_bank_enable: false
+  cas_route_bank_max_size: 50000
+  cas_route_discovery_mode: activation
+  cas_patching_topm: 8
+  cas_patching_score_weight: 1.0
+  cas_direct_forget_weight: 0.0
+  cas_direct_safe_weight: 1.0
+  cas_direct_pair_weight: 1.0
+  cas_direct_margin: 0.0
+  cas_direct_use_softplus: true
+  cas_direct_warmup_steps: 0
+  cas_direct_safe_decay_start_step: -1
+  cas_direct_safe_decay_duration: 0
+  cas_direct_safe_min_weight: null
+  cas_freeze_projection_head: false
+  cru_forget_use_softplus: false
+  cru_forget_softplus_beta: 1.0
+  cas_repr_mode: hyperbolic
+  route_selection_mode: cascade
+  route_random_seed: 42
+  retain_loss_type: NLL

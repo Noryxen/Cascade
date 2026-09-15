@@ -1,0 +1,15 @@
+# @package eval.tofu.metrics.extraction_strength
+defaults:
+  - /collator@collators: indexed
+  - ../../data/datasets@datasets: TOFU_QA_forget
+  # ^ get default dataset and generation config information
+
+handler: extraction_strength
+batch_size: ${eval.tofu.batch_size}
+
+datasets:
+  TOFU_QA_forget:
+    args:
+      hf_args:
+        name: ${eval.tofu.forget_split}_perturbed
+      question_key: ${eval.tofu.question_key}

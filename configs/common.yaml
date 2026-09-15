@@ -1,0 +1,23 @@
+# Shared defaults for every entry point. Explicit CLI overrides take precedence.
+defaults:
+  - model: Qwen3-1.7B
+  - collator: default
+  - paths: default
+  - _self_
+
+task_name: ???
+seed: 0
+padding_side: left
+
+dataset_defaults:
+  tofu:
+    forget_split: forget10
+    retain_split: retain90
+    holdout_split: holdout10
+    max_length: 512
+  muse:
+    data_split: News
+    max_length: 2048
+    qa_max_length: 512
+  wmdp:
+    max_length: 512

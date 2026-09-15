@@ -1,0 +1,2 @@
+# Bash launchers must remain executable on Linux and Git Bash checkouts.
+*.sh text eol=lf

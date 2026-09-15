@@ -1,0 +1,8 @@
+model_args:
+  attn_implementation: flash_attention_2
+  torch_dtype: bfloat16
+tokenizer_args:
+  padding_side: ${padding_side}
+template_args:
+  apply_chat_template: true
+  system_prompt: You are a helpful assistant.

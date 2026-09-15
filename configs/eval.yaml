@@ -1,0 +1,12 @@
+defaults:
+  - common
+  - eval: tofu
+  - hydra: default
+  - experiment: null
+  - _self_
+
+model:
+  model_args:
+    device_map: cuda
+
+mode: eval

@@ -1,0 +1,5 @@
+DataCollatorForSupervisedDatasetwithIndex:
+  handler: DataCollatorForSupervisedDataset
+  args:
+    padding_side: ${padding_side}
+    index: index

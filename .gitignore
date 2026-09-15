@@ -1,0 +1,45 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Build / distribution
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project outputs (checkpoints, logs, evaluation results)
+saves/
+outputs/
+logs/
+
+# Environment / secrets
+.env
+*.env.local
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pre-commit cache
+.pre-commit-cache/
+
+# Testing caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

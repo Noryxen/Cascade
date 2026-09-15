@@ -1,0 +1,10 @@
+defaults:
+  - common
+  - _self_
+
+template_args:
+  system_prompt_with_special_tokens: "<|im_start|>system\n${.system_prompt}<|im_end|>\n"
+  user_start_tag: "<|im_start|>user\n"
+  user_end_tag: "<|im_end|>\n"
+  asst_start_tag: "<|im_start|>assistant\n"
+  asst_end_tag: "<|im_end|>\n"

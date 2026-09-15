@@ -1,0 +1,16 @@
+# @package eval.tofu.metrics.composite_forgetting_index
+defaults:
+  - .@pre_compute.forget_prob: forget_Q_A_Prob
+  - .@pre_compute.forget_rouge: forget_Q_A_ROUGE
+  - .@pre_compute.forget_truth_ratio: forget_Truth_Ratio
+
+pre_compute:
+  forget_prob:
+    access_key: forget_prob
+  forget_rouge:
+    access_key: forget_rouge
+  forget_truth_ratio:
+    access_key: forget_truth_ratio
+
+handler: composite_forgetting_index
+eps: 1e-8

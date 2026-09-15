@@ -1,0 +1,22 @@
+# @package eval.tofu
+# NOTE: the above line is not a comment, but sets the package for config. See https://hydra.cc/docs/upgrades/0.11_to_1.0/adding_a_package_directive/
+
+defaults:
+  - base
+  - tofu_metrics: # When you import a metric here, its configuration automatically populates the
+  # metric key below, enabled by the @package directive at the top of each configuration file.
+    - forget_Q_A_Prob
+    - forget_Q_A_ROUGE
+    - extraction_strength
+    - model_utility # populated in the metrics key as metrics.model_utility
+    - composite_forgetting_index
+    - balanced_unlearning_score
+
+handler: TOFUEvaluator
+metrics: {} # lists a mapping from each evaluation metric to its config
+# populated through the first (@package) line in each metric config
+forget_split: ${dataset_defaults.tofu.forget_split}
+holdout_split: ${dataset_defaults.tofu.holdout_split}
+retain_logs_path: null
+question_key: "question" # Specifies which key to use during forget and retain evaluations (e.g., "question" or "paraphrased_question")
+batch_size: 32

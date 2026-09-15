@@ -1,0 +1,13 @@
+# @package eval.tofu.metrics.balanced_unlearning_score
+defaults:
+  - .@pre_compute.cfi: composite_forgetting_index
+  - .@pre_compute.utility: model_utility
+
+pre_compute:
+  cfi:
+    access_key: cfi
+  utility:
+    access_key: utility
+
+handler: balanced_unlearning_score
+eps: 1.0e-10

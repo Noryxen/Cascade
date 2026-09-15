@@ -1,0 +1,5 @@
+do_sample: False
+top_p: 1.0
+temperature: 1.0
+max_new_tokens: 200
+use_cache: True

@@ -1,0 +1,15 @@
+# @package eval.tofu.metrics.wf_Q_A_ROUGE
+defaults:
+  - /collator@collators: indexed
+  - ../../data/datasets@datasets: TOFU_QA_wf
+  - ../../generation@generation_args: default
+
+  # ^ get default dataset and generation config information
+
+handler: rouge
+rouge_type: rougeL_recall
+batch_size: ${eval.tofu.batch_size}
+datasets: # override as needed
+  TOFU_QA_wf:
+    args:
+      predict_with_generate: True

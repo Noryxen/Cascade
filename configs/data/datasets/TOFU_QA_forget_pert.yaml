@@ -1,0 +1,10 @@
+TOFU_QA_forget_pert:
+  handler: QADataset
+  args:
+    hf_args:
+      name: ${dataset_defaults.tofu.forget_split}_perturbed
+      split: "train"
+      path: ${paths.data_dir}/tofu
+    question_key: "question"
+    answer_key: "perturbed_answer"
+    max_length: ${dataset_defaults.tofu.max_length}

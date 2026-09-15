@@ -1,0 +1,5 @@
+root_dir: .
+data_dir: ${paths.root_dir}/data
+datasets: ${paths.root_dir}/configs/data/datasets
+output_dir: ${paths.root_dir}/saves/${mode}/${task_name}
+work_dir: ${hydra:runtime.cwd}
