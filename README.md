@@ -72,7 +72,7 @@ bash scripts/run_eval.sh <model_path> <task_name> forget10 holdout10 <retain_log
 
 ### 📄 Citation
 
-```bash
+```
 @article{Cascade,
       title={Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning}, 
       author={Qingchen Yu and Shiying Duan and Xiaodong Li and Yuhua Wang and Zhiyu Li and Shiji Zhou and Yifan Sun and Zhaoxin Fan},
