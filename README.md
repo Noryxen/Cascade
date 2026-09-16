@@ -74,9 +74,9 @@ bash scripts/run_eval.sh <model_path> <task_name> forget10 holdout10 <retain_log
 
 ```
 @article{Cascade,
-      title={Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning}, 
-      author={Qingchen Yu and Shiying Duan and Xiaodong Li and Yuhua Wang and Zhiyu Li and Shiji Zhou and Yifan Sun and Zhaoxin Fan},
-      journal={arXiv preprint arXiv:2609.16890},
-      year={2026},
+    title={Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning}, 
+    author={Qingchen Yu and Shiying Duan and Xiaodong Li and Yuhua Wang and Zhiyu Li and Shiji Zhou and Yifan Sun and Zhaoxin Fan},
+    journal={arXiv preprint arXiv:2609.16890},
+    year={2026},
 }
 ```
