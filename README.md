@@ -73,10 +73,28 @@ bash scripts/run_eval.sh <model_path> <task_name> forget10 holdout10 <retain_log
 ### 📄 Citation
 
 ```
-@article{Cascade,
-    title={Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning}, 
-    author={Qingchen Yu and Shiying Duan and Xiaodong Li and Yuhua Wang and Zhiyu Li and Shiji Zhou and Yifan Sun and Zhaoxin Fan},
-    journal={arXiv preprint arXiv:2609.16890},
-    year={2026},
+@inproceedings{yu-etal-2026-cascade,
+    title = "Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning",
+    author = "Yu, Qingchen  and
+      Duan, Shiying  and
+      Li, Xiaodong  and
+      Wang, Yuhua  and
+      li, Zhiyu  and
+      Zhou, Shiji  and
+      Sun, Yifan  and
+      Fan, Zhaoxin",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2026",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-emnlp.794/",
+    pages = "16812--16838",
+    ISBN = "979-8-89176-462-0",
+    abstract = "Large Language Model (LLM) unlearning is essential for removing sensitive or copyrighted knowledge while preserving general utility. Existing methods often leave residual knowledge in intermediate representations, which can still be recovered. To address this, we propose \textit{Cascade}, a hierarchical recoverability control framework that minimizes the internal identifiability of target knowledge. Cascade combines three complementary controls: path-level routing to suppress privacy-associated activation routes, representation-level compression to reduce geometric separability, and decoding-level intervention to limit residual recovery. Experiments on TOFU, MUSE-News, and WMDP, including robustness tests with query reformulation and extraction-style prompts, show that Cascade effectively reduces recoverability while maintaining stable model utility."
 }
 ```
